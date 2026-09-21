@@ -1,0 +1,408 @@
+/* =================================
+   AUTOCAD HERO SLIDER
+================================= */
+
+.autocad-slider {
+    position: relative;
+    width: 100%;
+    height: 720px;
+    overflow: hidden;
+    background: #111;
+}
+
+
+/* Slides */
+
+.slides {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: scale(1.04);
+
+    transition:
+        opacity 0.8s ease,
+        visibility 0.8s ease,
+        transform 5s ease;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+}
+
+
+/* Dark Overlay */
+
+.slide-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.65) 40%,
+            rgba(0, 0, 0, 0.20) 100%
+        );
+}
+
+
+/* Container */
+
+.slider-container {
+    position: relative;
+
+    width: 100%;
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: auto;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+
+    z-index: 2;
+}
+
+
+/* Hero Content */
+
+.hero-content {
+    max-width: 700px;
+
+    color: #fff;
+
+    animation: heroContent 0.8s ease;
+}
+
+.slide:not(.active) .hero-content {
+    animation: none;
+}
+
+
+@keyframes heroContent {
+
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Small Title */
+
+.hero-small-title {
+    display: inline-block;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 3px;
+
+    color: #ffc107;
+
+    margin-bottom: 18px;
+}
+
+
+/* Heading */
+
+.hero-content h1 {
+
+    margin: 0 0 25px;
+
+    font-size: 68px;
+
+    line-height: 1.05;
+
+    font-weight: 700;
+
+    color: #fff;
+}
+
+.hero-content h1 span {
+    display: block;
+
+    color: #ffc107;
+}
+
+
+/* Paragraph */
+
+.hero-content p {
+
+    max-width: 620px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    color: #f1f1f1;
+
+    margin-bottom: 35px;
+}
+
+
+/* Buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 15px;
+}
+
+
+.hero-buttons a {
+
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Primary */
+
+.btn-primary {
+
+    background: #ffc107;
+
+    color: #111;
+
+    border: 2px solid #ffc107;
+}
+
+.btn-primary:hover {
+
+    background: #fff;
+
+    border-color: #fff;
+
+    color: #111;
+}
+
+
+/* Outline */
+
+.btn-outline {
+
+    color: #fff;
+
+    border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+
+    background: #fff;
+
+    color: #111;
+}
+
+
+/* =================================
+   ARROWS
+================================= */
+
+.slider-btn {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    z-index: 5;
+
+    width: 50px;
+    height: 50px;
+
+    border: 1px solid rgba(255,255,255,0.5);
+
+    border-radius: 50%;
+
+    background: rgba(0,0,0,0.35);
+
+    color: #fff;
+
+    font-size: 22px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+
+    background: #ffc107;
+
+    color: #111;
+
+    border-color: #ffc107;
+}
+
+
+.slider-btn.prev {
+    left: 25px;
+}
+
+.slider-btn.next {
+    right: 25px;
+}
+
+
+/* =================================
+   DOTS
+================================= */
+
+.slider-dots {
+
+    position: absolute;
+
+    left: 50%;
+
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    display: flex;
+
+    gap: 10px;
+}
+
+
+.dot {
+
+    width: 35px;
+
+    height: 4px;
+
+    background: rgba(255,255,255,0.5);
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+
+.dot.active {
+
+    background: #ffc107;
+
+    width: 50px;
+}
+
+
+/* =================================
+   TABLET
+================================= */
+
+@media (max-width: 991px) {
+
+    .autocad-slider {
+        height: 650px;
+    }
+
+    .hero-content h1 {
+        font-size: 52px;
+    }
+
+    .hero-content p {
+        font-size: 16px;
+    }
+
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 575px) {
+
+    .autocad-slider {
+        height: 650px;
+    }
+
+    .slider-container {
+        padding: 0 25px;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-small-title {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .hero-content h1 {
+        font-size: 40px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .hero-buttons a {
+        padding: 12px 22px;
+    }
+
+    .slider-btn {
+        width: 40px;
+        height: 40px;
+
+        font-size: 18px;
+    }
+
+    .slider-btn.prev {
+        left: 10px;
+    }
+
+    .slider-btn.next {
+        right: 10px;
+    }
+
+}
