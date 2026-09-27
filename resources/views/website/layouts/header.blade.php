@@ -21,6 +21,40 @@
             <link rel="stylesheet" href="{{asset('website/assets/css/style.css')}}">
             <link rel="stylesheet" href="{{asset('website/assets/css/common.css')}}">
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css">
+   <style>
+   .logo img{
+    width: 160px;
+    height: 60px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Big logo */
+.big-logo img, .footer-logo a img{
+    width: 260px;
+    height: 83px;
+}
+
+/* Small logo */
+.small-logo img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+    .big-logo img {
+        width: 130px;
+        height: 50px;
+    }
+
+    .small-logo img {
+        width: 40px;
+        height: 40px;
+    }
+}
+   </style>
    </head>
 
    <body>
@@ -70,7 +104,7 @@
                             <div class="col-xl-2 col-lg-2 col-md-1">
                                 <div class="logo">
                                     <!-- logo-1 -->
-                                    <a href="index.html" class="big-logo"><img src="{{asset('website/assets/img/logo/logo.png')}}" alt=""></a>
+                                    <a href="index.html" class="big-logo"><img src="{{asset('website/assets/img/logo/newlogo.png')}}" alt=""></a>
                                     <!-- logo-2 -->
                                     <a href="index.html" class="small-logo"><img src="{{asset('website/assets/img/logo/loder-logo.png')}}" alt=""></a>
                                 </div>
@@ -84,7 +118,7 @@
                                             <li><a href="{{Route::has('about')?route('about'):'#'}}">About us</a></li>
                                             <li><a href="{{Route::has('projects')?route('projects'):'#'}}">Our Projects</a></li>
                                             <li><a href="{{Route::has('services')?route('services'):'#'}}">Services</a></li>
-                                            <li><a href="{{Route::has('services')?route('services'):'#'}}">How we work</a></li>
+                                            <li><a href="{{Route::has('work_process')?route('work_process'):'#'}}">How we work</a></li>
                                             {{--<li><a href="blog.html">Blog</a>
                                                 <ul class="submenu">
                                                     <li><a href="blog.html">Blog</a></li>

@@ -1,115 +1,13 @@
 @extends('/website/layouts/main')
-
 @section('main')
-
-<!-- Breadcrumb Start -->
-<div class="breadcrumb-area">
-    <div class="breadcrumb-bg d-flex align-items-center"
-        style="background-image: url('{{ asset('website/assets/img/gallery/services_details.png') }}');">
-
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-12">
-                    <div class="hero-cap">
-                        <h2>About Us</h2>
-
-                        <nav aria-label="breadcrumb">
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item">
-                                    <a href="{{ url('/') }}">Home</a>
-                                </li>
-
-                                <li class="breadcrumb-item active" aria-current="page">
-                                    About Us
-                                </li>
-                            </ol>
-                        </nav>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
-<!-- Breadcrumb End -->
-
 <style>
-/* Short Breadcrumb */
-.breadcrumb-area {
-    width: 100%;
-    margin-top: 150px;
-}
-
-.breadcrumb-bg {
-    min-height: 180px;
-    height: 180px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-}
-
-/* Light Transparent Overlay */
-.breadcrumb-bg::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.15);
-}
-
-.breadcrumb-bg .container {
-    position: relative;
-    z-index: 2;
-}
-
-.hero-cap h2 {
-    color: #fff;
-    font-size: 36px;
-    margin-bottom: 8px;
-}
-
-.hero-cap .breadcrumb {
-    background: transparent;
-    padding: 0;
-    margin: 0;
-}
-
-.hero-cap .breadcrumb-item,
-.hero-cap .breadcrumb-item a {
-    color: #fff;
-    font-size: 14px;
-}
-
-.hero-cap .breadcrumb-item a {
-    text-decoration: none;
-}
-
-.hero-cap .breadcrumb-item.active {
-    color: #ddd;
-}
-
-.hero-cap .breadcrumb-item + .breadcrumb-item::before {
-    color: #fff;
-    content: "/";
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-    .breadcrumb-bg {
-        min-height: 140px;
-        height: 140px;
-    }
-
-    .hero-cap h2 {
-        font-size: 28px;
-    }
+.bg-light {
+    background-color: #e8eef6 !important;
 }
 </style>
 <section class="about-area section-padding">
     <div class="container">
-
-
     <div class="row align-items-center">
-
         <!-- Image -->
         <div class="col-lg-6 col-md-6 mb-4 mb-md-0">
             <div class="about-img">
@@ -118,22 +16,18 @@
                      class="img-fluid">
             </div>
         </div>
-
         <!-- Content -->
-        <div class="col-lg-6 col-md-6">
+        <div class="col-lg-6 col-md-6 mt-5">
             <div class="about-caption">
-
                 <div class="section-tittle mb-25">
                     <span>About Sushil Enterprises</span>
                     <h2>Professional AutoCAD Design & Drafting Solutions</h2>
                 </div>
-
                 <p>
                     <strong>Sushil Enterprises</strong> provides professional
                     AutoCAD-based design and drafting services for building,
                     architectural and mechanical design requirements.
                 </p>
-
                 <p>
                     We create accurate and detailed 2D drawings and technical
                     designs that help architects, engineers, contractors and
@@ -240,15 +134,10 @@
                     Professional 2D CAD drafting with proper dimensions,
                     annotations, measurements and technical details.
                 </p>
-
             </div>
         </div>
-
     </div>
-
 </div>
-
-
 </section>
 <!-- ================ What We Do Section End ================ -->
 
@@ -316,7 +205,7 @@
         <div class="col-lg-6 mt-4 mt-lg-0">
 
             <div class="about-img">
-                <img src="{{ asset('website/assets/img/gallery/about2.jpg') }}"
+                <img src="{{ asset('website/images/slider/exprience01.png') }}"
                      alt="AutoCAD Technical Drawing"
                      class="img-fluid">
             </div>
@@ -407,41 +296,388 @@
 <!-- ================ Why Choose Us Section End ================ -->
 
 <!-- ================ CTA Section Start ================ -->
-
-<section class="about-cta section-padding">
+<section class="se-about-cta section-padding">
     <div class="container">
 
+        <div class="se-cta-wrapper">
 
-    <div class="row justify-content-center text-center">
+            <!-- Decorative Technical Elements -->
+            <div class="se-cta-grid"></div>
+            <div class="se-cta-corner se-cta-corner-top"></div>
+            <div class="se-cta-corner se-cta-corner-bottom"></div>
 
-        <div class="col-lg-8">
+            <div class="row align-items-center">
 
-            <div class="section-tittle">
+                <!-- Content -->
+                <div class="col-lg-8">
 
-                <span>Let's Work Together</span>
+                    <div class="se-cta-content">
 
-                <h2>
-                    Have a Design Requirement?
-                </h2>
+                        <span class="se-cta-label">
+                            <i class="fas fa-drafting-compass"></i>
+                            LET'S WORK TOGETHER
+                        </span>
 
-                <p>
-                    Share your building, machine or drafting requirements
-                    with us and let us create a detailed AutoCAD design
-                    for your project.
-                </p>
+                        <h2>
+                            Have a Design
+                            <span>Requirement?</span>
+                        </h2>
 
-                <a href="{{ url('/contact') }}"
-                   class="btn btn-primary mt-20">
-                    Contact Us
-                </a>
+                        <p>
+                            Share your building, architectural, mechanical,
+                            or technical drafting requirements with us.
+                            Our team will create accurate and professional
+                            AutoCAD drawings tailored to your project.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CTA -->
+                <div class="col-lg-4">
+
+                    <div class="se-cta-action">
+
+                        <a href="{{ url('/contact') }}" class="se-cta-btn">
+                            <span>Discuss Your Project</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+
+                        <small>
+                            Get in touch with our design team
+                        </small>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
 
     </div>
+</section>
 
-</div>
+<style>
+/* ==========================================
+   SUSHIL ENTERPRISES
+   PROFESSIONAL CTA SECTION
+   Primary Color: #ff5f13
+========================================== */
+
+.se-about-cta {
+    position: relative;
+    background: #f7f7f7;
+    overflow: hidden;
+}
+
+
+/* CTA Wrapper */
+
+.se-cta-wrapper {
+    position: relative;
+
+    padding: 70px 70px;
+
+    background: #1f1f1f;
+
+    overflow: hidden;
+
+    border-left: 4px solid #ff5f13;
+
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.10);
+}
+
+
+/* Technical Grid */
+
+.se-cta-grid {
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 45%;
+    height: 100%;
+
+    opacity: 0.08;
+
+    background-image:
+        linear-gradient(#ffffff 1px, transparent 1px),
+        linear-gradient(90deg, #ffffff 1px, transparent 1px);
+
+    background-size: 35px 35px;
+
+    pointer-events: none;
+}
+
+
+/* Orange Glow */
+
+.se-cta-wrapper::before {
+    content: "";
+
+    position: absolute;
+
+    width: 250px;
+    height: 250px;
+
+    right: -100px;
+    top: -120px;
+
+    border-radius: 50%;
+
+    background: #ff5f13;
+
+    opacity: 0.10;
+
+    pointer-events: none;
+}
+
+
+/* Technical Corners */
+
+.se-cta-corner {
+    position: absolute;
+
+    width: 45px;
+    height: 45px;
+
+    pointer-events: none;
+}
+
+.se-cta-corner-top {
+    top: 20px;
+    right: 20px;
+
+    border-top: 1px solid #ff5f13;
+    border-right: 1px solid #ff5f13;
+}
+
+.se-cta-corner-bottom {
+    bottom: 20px;
+    left: 20px;
+
+    border-left: 1px solid #ff5f13;
+    border-bottom: 1px solid #ff5f13;
+}
+
+
+/* CTA Label */
+
+.se-cta-label {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 18px;
+
+    color: #ff5f13;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+}
+
+.se-cta-label i {
+    font-size: 15px;
+}
+
+
+/* Heading */
+
+.se-cta-content h2 {
+    margin-bottom: 20px;
+
+    color: #ffffff;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    line-height: 1.2;
+}
+
+.se-cta-content h2 span {
+    color: #ff5f13;
+}
+
+
+/* Description */
+
+.se-cta-content p {
+    max-width: 680px;
+
+    margin-bottom: 0;
+
+    color: #bdbdbd;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* CTA Action */
+
+.se-cta-action {
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    justify-content: center;
+
+    padding-left: 25px;
+
+    z-index: 2;
+}
+
+
+/* CTA Button */
+
+.se-cta-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 22px;
+
+    padding: 16px 22px 16px 25px;
+
+    background: #ff5f13;
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition: all 0.3s ease;
+}
+
+.se-cta-btn i {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.15);
+
+    transition: all 0.3s ease;
+}
+
+
+.se-cta-btn:hover {
+    background: #ffffff;
+
+    color: #1f1f1f;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.20);
+}
+
+.se-cta-btn:hover i {
+    background: #ff5f13;
+
+    color: #ffffff;
+
+    transform: translateX(4px);
+}
+
+
+/* Small Text */
+
+.se-cta-action small {
+    margin-top: 14px;
+
+    color: #888;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+    .se-cta-wrapper {
+        padding: 55px 45px;
+    }
+
+    .se-cta-content h2 {
+        font-size: 36px;
+    }
+
+    .se-cta-action {
+        padding-left: 0;
+        margin-top: 30px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .se-cta-wrapper {
+        padding: 45px 30px;
+
+        border-left-width: 3px;
+    }
+
+    .se-cta-content h2 {
+        font-size: 30px;
+    }
+
+    .se-cta-content p {
+        font-size: 14px;
+    }
+
+    .se-cta-grid {
+        width: 70%;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .se-cta-wrapper {
+        padding: 40px 22px;
+    }
+
+    .se-cta-content h2 {
+        font-size: 27px;
+    }
+
+    .se-cta-label {
+        font-size: 10px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .se-cta-btn {
+        width: 100%;
+
+        justify-content: space-between;
+    }
+
+}
+</style>
 
 
 </section>

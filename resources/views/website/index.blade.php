@@ -1045,10 +1045,12 @@
 
     <div class="container">
 
+        <!-- Section Heading -->
         <div class="row justify-content-center">
             <div class="col-xl-8 col-lg-9">
 
                 <div class="section-tittle text-center mb-60">
+
                     <div class="front-text">
                         <h2>Our Expertise</h2>
                     </div>
@@ -1056,33 +1058,46 @@
                     <span class="back-text">Expertise</span>
 
                     <p class="se-section-intro">
-                        Our expertise covers building, architectural and
-                        mechanical AutoCAD design and technical drafting.
+                        Professional AutoCAD design and technical drafting
+                        solutions for architectural, building and mechanical projects.
                     </p>
+
                 </div>
 
             </div>
         </div>
 
 
+        <!-- Expertise Cards -->
         <div class="row">
 
             <!-- 2D Drawings -->
             <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                <div class="se-stat-card">
+                <div class="se-expertise-card">
 
-                    <div class="se-stat-icon">
-                      <i class="bi bi-easel"></i>
+                    <div class="se-card-top">
+                        <span class="se-card-number">01</span>
+
+                        <div class="se-expertise-icon">
+                            <i class="bi bi-easel"></i>
+                        </div>
                     </div>
 
-                    <div class="se-stat-number">2D</div>
+                    <div class="se-card-content">
 
-                    <h3>2D Drawings</h3>
+                        <h3>2D AutoCAD Drawings</h3>
 
-                    <p>
-                        Clear and detailed technical drawings
-                        prepared in AutoCAD.
-                    </p>
+                        <p>
+                            Precise and detailed 2D technical drawings
+                            prepared to meet project specifications and
+                            professional drafting standards.
+                        </p>
+
+                    </div>
+
+                    <div class="se-card-line"></div>
+
+                    <span class="se-card-label">TECHNICAL DRAWING</span>
 
                 </div>
             </div>
@@ -1090,20 +1105,31 @@
 
             <!-- Building Plans -->
             <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                <div class="se-stat-card">
+                <div class="se-expertise-card">
 
-                    <div class="se-stat-icon">
-                        <i class="fas fa-building"></i>
+                    <div class="se-card-top">
+                        <span class="se-card-number">02</span>
+
+                        <div class="se-expertise-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
                     </div>
 
-                    <div class="se-stat-number">01</div>
+                    <div class="se-card-content">
 
-                    <h3>Building Plans</h3>
+                        <h3>Building Plans</h3>
 
-                    <p>
-                        Professional layouts and floor plans
-                        for building projects.
-                    </p>
+                        <p>
+                            Detailed building layouts, floor plans and
+                            architectural drawings designed for practical
+                            construction requirements.
+                        </p>
+
+                    </div>
+
+                    <div class="se-card-line"></div>
+
+                    <span class="se-card-label">ARCHITECTURAL DESIGN</span>
 
                 </div>
             </div>
@@ -1111,20 +1137,31 @@
 
             <!-- Mechanical Designs -->
             <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                <div class="se-stat-card">
+                <div class="se-expertise-card">
 
-                    <div class="se-stat-icon">
-                        <i class="fas fa-cogs"></i>
+                    <div class="se-card-top">
+                        <span class="se-card-number">03</span>
+
+                        <div class="se-expertise-icon">
+                            <i class="fas fa-cogs"></i>
+                        </div>
                     </div>
 
-                    <div class="se-stat-number">02</div>
+                    <div class="se-card-content">
 
-                    <h3>Mechanical Designs</h3>
+                        <h3>Mechanical Designs</h3>
 
-                    <p>
-                        Detailed drawings for machines and
-                        mechanical components.
-                    </p>
+                        <p>
+                            Accurate mechanical drawings and component
+                            designs developed with attention to dimensions,
+                            details and technical requirements.
+                        </p>
+
+                    </div>
+
+                    <div class="se-card-line"></div>
+
+                    <span class="se-card-label">MECHANICAL DESIGN</span>
 
                 </div>
             </div>
@@ -1132,20 +1169,31 @@
 
             <!-- Technical Drafting -->
             <div class="col-xl-3 col-lg-3 col-md-6 mb-30">
-                <div class="se-stat-card">
+                <div class="se-expertise-card">
 
-                    <div class="se-stat-icon">
-                        <i class="bi bi-compass"></i>
+                    <div class="se-card-top">
+                        <span class="se-card-number">04</span>
+
+                        <div class="se-expertise-icon">
+                            <i class="bi bi-compass"></i>
+                        </div>
                     </div>
 
-                    <div class="se-stat-number">03</div>
+                    <div class="se-card-content">
 
-                    <h3>Technical Drafting</h3>
+                        <h3>Technical Drafting</h3>
 
-                    <p>
-                        Accurate and organized technical
-                        drafting for project requirements.
-                    </p>
+                        <p>
+                            Organized and accurate technical drafting
+                            solutions developed according to specific
+                            project requirements.
+                        </p>
+
+                    </div>
+
+                    <div class="se-card-line"></div>
+
+                    <span class="se-card-label">TECHNICAL DRAFTING</span>
 
                 </div>
             </div>
@@ -1155,7 +1203,245 @@
     </div>
 
 </section>
+<style>
+/* ==========================================
+   SUSHIL ENTERPRISES - EXPERTISE
+   Primary Color: red
+========================================== */
 
+.se-expertise-area {
+    position: relative;
+    background: #f8f8f8;
+    overflow: hidden;
+}
+
+.se-section-intro {
+    max-width: 700px;
+    margin: 18px auto 0;
+    color: #666;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+
+/* Expertise Card */
+
+.se-expertise-card {
+    position: relative;
+    height: 100%;
+    min-height: 340px;
+    padding: 32px 28px;
+
+    background: #fff;
+    border: 1px solid #e8e8e8;
+
+    transition: all 0.35s ease;
+    overflow: hidden;
+}
+
+
+/* Technical Corner */
+
+.se-expertise-card::before {
+    content: "";
+    position: absolute;
+
+    top: 0;
+    right: 0;
+
+    width: 55px;
+    height: 55px;
+
+    border-top: 2px solid red;
+    border-right: 2px solid red;
+
+    opacity: 0.8;
+}
+
+.se-expertise-card::after {
+    content: "";
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 45px;
+    height: 45px;
+
+    border-left: 2px solid red;
+    border-bottom: 2px solid red;
+
+    opacity: 0.6;
+}
+
+
+/* Hover */
+
+.se-expertise-card:hover {
+    transform: translateY(-8px);
+
+    border-color: red;
+
+    box-shadow: 0 18px 45px rgba(0, 0, 0, 0.09);
+}
+
+
+/* Card Top */
+
+.se-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+}
+
+
+/* Number */
+
+.se-card-number {
+    font-size: 13px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: red;
+}
+
+
+/* Icon */
+
+.se-expertise-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fff4ef;
+
+    border: 1px solid #ffd7c8;
+
+    color: red;
+
+    font-size: 23px;
+
+    transition: all 0.35s ease;
+}
+
+
+/* Icon Hover */
+
+.se-expertise-card:hover .se-expertise-icon {
+    background: red;
+    color: #fff;
+
+    border-color: red;
+
+    transform: rotate(-5deg);
+}
+
+
+/* Content */
+
+.se-card-content h3 {
+    margin-bottom: 15px;
+
+    font-size: 21px;
+    font-weight: 600;
+
+    color: #222;
+
+    line-height: 1.35;
+}
+
+.se-card-content p {
+    margin-bottom: 25px;
+
+    color: #777;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* Bottom Line */
+
+.se-card-line {
+    width: 38px;
+    height: 2px;
+
+    background: red;
+
+    margin-bottom: 13px;
+
+    transition: width 0.35s ease;
+}
+
+.se-expertise-card:hover .se-card-line {
+    width: 65px;
+}
+
+
+/* Label */
+
+.se-card-label {
+    font-size: 10px;
+    font-weight: 600;
+
+    letter-spacing: 1.5px;
+
+    color: #999;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 991px) {
+
+    .se-expertise-card {
+        min-height: 320px;
+        padding: 28px 24px;
+    }
+
+}
+
+
+@media (max-width: 767px) {
+
+    .se-expertise-area {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    .se-section-intro {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .se-expertise-card {
+        min-height: auto;
+        padding: 28px 24px;
+    }
+
+}
+
+
+@media (max-width: 575px) {
+
+    .se-card-content h3 {
+        font-size: 19px;
+    }
+
+    .se-card-content p {
+        font-size: 14px;
+    }
+
+}
+</style>
 
 <!-- =========================================================
      2. HOW WE WORK
